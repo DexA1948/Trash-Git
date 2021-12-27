@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <title>Changing CSS with JS and jQuery</title>
+    <script src="jquery.js"></script>
+</head>
+
+<body>
+    <p id="id01">This is me</p>
+    <button onclick="hideshow(document.getElementById('id01'))">HideShow</button>
+    <button onclick="hideshowjq()">HideShowjQ</button>
+    <button onclick="changefontsize()">ChangeFontSize</button>
+</body>
+
+<script>
+    function hideshow(id01) {
+        if (id01.style.display != '') {
+            id01.style.display = '';
+        } else {
+            id01.style.display = 'none';
+        }
+    }
+
+    function hideshowjq() {
+        id01 = $("#id01");
+        if (id01[0].style.display != '') {
+            id01.show();
+        } else {
+            id01.hide();
+        }
+    }
+
+    function changefontsize() {
+        id01 = $("#id01");
+        id01.css("font-size", "35px");
+    }
+
+</script>
+
+</html>

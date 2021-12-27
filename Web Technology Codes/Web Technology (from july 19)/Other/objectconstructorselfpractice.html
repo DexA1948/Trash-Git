@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Constructor with methods</title>
+</head>
+
+<body>
+    <div id="notnew">
+
+    </div>
+</body>
+
+<script>
+    function Person(name, age, gender, display) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+        this.display = display;
+    }
+
+    class Person2 {
+        constructor(name, eyecolor) {
+            this.name = name;
+            this.eyecolor = eyecolor;
+            this.school = "Vedas";
+            this.method1 = function() {
+                let para = document.createElement('p');
+                para.innerHTML = "This is use of method 1";
+                document.getElementById('notnew').appendChild(para);
+
+            }
+        }
+
+        info = "I am good";
+
+        method2() {
+            console.log("This is use of method 2");
+        }
+    }
+
+    //outer functions / methods
+    function print() {
+        document.getElementById("notnew").innerHTML += this.name + " is " + this.age + "years old.";
+    }
+
+    function changecolor() {
+        document.body.style.backgroundColor = "red";
+    }
+
+    const person = new Person("Deshant", 21, "Male", print);
+    person.display();
+
+    const person2 = new Person("Hero", 31, "Male", print);
+    person2.display();
+
+    person2.changecolor = changecolor;
+    person2.changecolor();
+    console.log(person2);
+
+    person2.extra = "I have a small dick."
+    console.log(person2.extra);
+
+    //using class
+    const person3 = new Person2("Deshant Person2", "Blue");
+    console.log(person3);
+    person3.method2();
+
+    Person2.extra = "I have a big dick";
+    console.log(person3.extra);
+
+    person4 = new Person2;
+    console.log(person4.extra);
+</script>
+
+</html>

@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>jQuery Selectors</title>
+    <script src="jquery.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="js.png"></link>
+</head>
+
+<style>
+    body {
+        margin: 20px;
+    }
+</style>
+
+<body>
+    <h2>JS7: jQuery Element, Id and Class Selectors</h2><br>
+    <div class="parent">
+        <h3>Select This By Using Tag Name</h3>
+        <p id="id01">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, sapiente!</p>
+        <p id="id02">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis, sint!</p>
+    </div>
+    <div class="parent">
+        <h3>Select This By Using Tag Name</h3>
+        <p id="id03">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, sed?</p>
+        <p id="id04">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non, exercitationem.</p>
+    </div>
+    <button id="showhide">Show/Hide First Paragraph</button>
+</body>
+
+<script>
+    // shortcut for $(document).ready(function(){});
+    $(function(){
+        $("h3").css("text-decoration", "underline");
+        
+        $("#showhide").click(function() {
+            if($("#id01").css("display") == "none"){
+                $("#id01").show();
+            }else{
+                $("#id01").hide();
+            }
+        });
+
+        $(".parent").mouseleave(function() {
+           $(this).hide(); 
+        });
+
+    });
+</script>
+</html>

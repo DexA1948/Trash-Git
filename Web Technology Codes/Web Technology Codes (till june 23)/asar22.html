@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array in JS</title>
+</head>
+
+<body>
+    <p id="testid"></p>
+    <p id="foreach"></p>
+</body>
+
+<script>
+    //declaring array
+    let name = ["Deshant", "Subash", "Kanchan", "Ridesh"]
+    let college = new Array("Vedas", "Ambition", "Nagararjuna", "Nepalaya", "Academia");
+
+    //accessing specific items or elements
+    var tag = document.getElementById("testid");
+    tag.innerHTML = 'Student '+ name[3] + ' study in college '+ college[0];
+
+    //foreach in js - something-more
+    college.forEach(callMe);
+
+    function callMe(item, index){
+        document.getElementById("foreach").innerHTML += index + "item: " + item + "<br>";
+    }
+</script>
+</html>

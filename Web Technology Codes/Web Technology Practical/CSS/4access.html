@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <title>Accessing HTML elements in CSS</title>
+    <link rel="shortcut icon" href="css.png" type="image/x-icon">
+</head>
+
+<style>
+    body{
+        margin: 30px;
+    }
+    div>h3 {
+        font-size: large;
+        color: red;
+    }
+    #selectbyid{
+        font-size: small;
+        color: rgb(133, 45, 45);
+    }
+    .selectbyclass{
+        font-size: 40;
+        color: rgb(48, 23, 156);
+    }
+    #boldfirstletter::first-letter{
+        font-weight: bold;
+    }
+</style>
+
+<body>
+    <h2>CSS4: Accessing Elements Using Tags, Id and Class names</h2><br>
+    <div>
+        <h3>Hello this heading 3 inside div tag is selected.</h3>
+    </div>
+    <p id="selectbyid">This is selected using id.</p>
+    <p class="selectbyclass">This is selected using class.</p>
+    <p id="boldfirstletter">The first letter is selected.</p>
+</body>
+
+</html>

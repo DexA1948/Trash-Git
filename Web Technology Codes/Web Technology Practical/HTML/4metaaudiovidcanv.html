@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <title>Meta Audio Video Canvas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/html.png" type="image/x-icon">
+</head>
+
+<style>
+    body{
+        margin: 20px;
+    }
+</style>
+
+<body>
+    <h2>HTML4: Meta Audio Video Canvas Tags</h2><br>
+    Play Your Song:<br>
+    <audio controls>
+        <source src="audios/song.mp3" type="audio/mp3">
+    </audio><br><br>
+    Play your video:<br>
+    <video controls style="width: 100%;">
+        <source src="videos/video1.mp4">
+    </video><br><br>
+    Canvas:<br>
+    <canvas id="myCanvas" width="200" height="100" style="border:3px solid #214e8a98;">
+    </canvas><br>
+</body>
+
+<script>
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.beginPath();
+    ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+    ctx.stroke();
+</script>
+
+</html>

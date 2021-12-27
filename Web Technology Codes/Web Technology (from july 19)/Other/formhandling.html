@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Handling</title>
+</head>
+
+<body>
+    <form name="hisform" onsubmit="validate()" method="POST">
+        Name: <input type="text" name="name"> Address: <input type="text" name="add">
+        <input type="submit" value="Save">
+    </form>
+    <p id="infoid"></p>
+</body>
+
+<script>
+    function validate() {
+        let n = document.forms["hisform"]["name"].value;
+        let a = document.forms["hisform"]["add"].value;
+
+        if (n == "" && a == "") {
+            alert("name and address field must not vbe empty");
+            return false;
+        } else {
+            document.getElementById("infoid").innerHTML = "I am " + n + " from " + a;
+        }
+    }
+</script>
+
+</html>

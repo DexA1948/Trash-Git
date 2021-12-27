@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="JsBarcode.all.min.js"></script>
+    <script src="https://kit.fontawesome.com/89c601140c.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<style>
+    #container {
+        width: 350px;
+        height: 560px;
+        margin: 10% auto;
+        padding: 2% 4%;
+        background-color: white;
+        border-radius: 8%;
+        box-shadow: 20px 22px 29px 8px black;
+    }
+    
+    .triangle-up {
+        width: 0;
+        height: 0;
+        border-left: 140px solid transparent;
+        border-right: 140px solid transparent;
+        border-bottom: 20px solid rgb(255, 196, 0);
+        margin: auto;
+    }
+    
+    #top {
+        padding: 4%;
+    }
+    
+    .park {
+        padding: 0px;
+    }
+    
+    .fa-parking {
+        font-size: 100px;
+        color: blue;
+    }
+    
+    .company-info {
+        padding: 5%;
+        font-size: large;
+        text-align: center;
+    }
+    
+    .preceipt {
+        padding: 10px;
+        text-align: center;
+        font-size: large;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+        font-weight: 500;
+    }
+    
+    .preceipt>p {
+        margin: 0px;
+    }
+    
+    .fromto {
+        font-size: large;
+        font-weight: 500;
+        display: inline;
+        margin: 0;
+        padding: 10px;
+        border-bottom: 2px solid black;
+    }
+    
+    .fromto>label {
+        width: 60px;
+        padding: 5px;
+        text-align: right;
+    }
+</style>
+
+<body>
+    <div id="container">
+        <div class="row parent">
+            <div class="col-12 triangle-up"></div>
+            <div class="row m-0" id="top">
+                <div class="col-4 park">
+                    <i class="fas fa-parking"></i>
+                </div>
+                <div class="col-8 company-info">
+                    <b>Company name</b><br>
+                    <b>Address</b>
+                </div>
+            </div>
+            <div class="row m-0 preceipt">
+                <p>PARKING RECEIPT</p>
+                <p id="currentdate"></p>
+            </div>
+            <div class="row fromto">
+                <label>From:</label><span id="from"></span><br>
+                <label>To:</label><span id="to"></span><br>
+
+                <div style="text-align: center;font-size: x-large;"><b>PAID:<span id="amount">&nbsp;&nbsp;</span></b></div>
+            </div>
+            <div class="row m-0 barcodediv">
+                <svg id="barcode"></svg>
+            </div>
+            <div class="col-12 triangle-up"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+<script>
+    function PC(code, hours) {
+        switch (code) {
+            case 'C':
+                //document.getElementById("rate").value = 1;
+                document.getElementById("amount").innerHTML += (1 * hours).toFixed(2);
+                break;
+            case 'B':
+                //document.getElementById("rate").value = 2;
+                document.getElementById("amount").innerHTML += (2 * hours).toFixed(2);
+                break;
+            case 'T':
+                //document.getElementById("rate").value = 3;
+                document.getElementById("amount").innerHTML += (3 * hours).toFixed(2);
+                break;
+            default:
+                //document.getElementById("rate").value = "error";
+                document.getElementById("amount").innerHTML += "error";
+        }
+    }
+
+    let Today = new Date();
+
+    document.getElementById("currentdate").innerHTML = Today.getDate() + " / " + Today.getMonth() + " / " + Today.getFullYear();
+
+    let name = prompt("Please Enter Your Name");
+
+    JsBarcode("#barcode", name);
+
+    vehicle = prompt("Enter The Vehicle Type");
+
+    while (true) {
+        if (vehicle.toLowerCase() == "car") {
+            code = "C";
+            break;
+        } else if (vehicle.toLowerCase() == "bus") {
+            code = "B";
+            break;
+        } else if (vehicle.toLowerCase() == "truck") {
+            code = "T";
+            break;
+        } else {
+            vehicle = prompt("Your Entry Was Invalid\nEnter The Vehicle Type");
+        }
+    }
+
+    from = prompt("Please Enter Your Time Of Arrival(24hr format), hours:min");
+
+    while (true) {
+        from = from.split(':');
+        if (from.length != 2 || isNaN(from[0]) || isNaN(from[1]) || from[0] < 0 || from[0] > 24 || from[1] < 0 || from[1] > 60) {
+            from = prompt("Your Entry Was Inavlid \n Please Enter Your Time Of Arrival (24hr format), hours:min");
+        } else {
+            if (from[0] < 12) {
+                document.getElementById("from").innerHTML = from[0] + ':' + from[1] + " am";
+                break;
+            } else if (from[0] > 12 && from[0] < 24) {
+                document.getElementById("from").innerHTML = (from[0] - 12) + ':' + from[1] + " pm";
+                break;
+            }
+        }
+    }
+
+    to = prompt("Please Enter Your Time Of Departure(24hr format), hours:min");
+    while (true) {
+        to = to.split(':');
+        console.log(to);
+        if (to.length != 2 || isNaN(to[0]) || isNaN(to[1]) || to[0] < 0 || to[0] > 24 || to[1] < 0 || to[1] > 60 || parseInt(to[0]) < parseInt(from[0])) {
+            to = prompt("Your Entry Was Inavlid \n Please Enter Your Time Of Departure (24hr format), hours:min");
+        } else {
+            if (to[0] < 12) {
+                document.getElementById("to").innerHTML = to[0] + ':' + to[1] + " am";
+                break;
+            } else if (to[0] > 12 && to[0] < 24) {
+                document.getElementById("to").innerHTML = (to[0] - 12) + ':' + to[1] + " pm";
+                break;
+            }
+        }
+    }
+
+    arrival = new Date();
+    arrival.setHours(from[0]);
+    arrival.setMinutes(from[1]);
+    depart = new Date();
+    depart.setHours(to[0]);
+    depart.setMinutes(to[1]);
+    hours = ((((depart - arrival) / 1000) / 60) / 60);
+    console.log(hours);
+
+    PC(code, hours);
+</script>
+
+</html>

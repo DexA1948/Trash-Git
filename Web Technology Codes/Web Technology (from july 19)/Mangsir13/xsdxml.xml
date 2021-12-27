@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<note xmlns="http://www.a.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.a.com note.xsd">
+    <to>Ram</to>
+    <from>Sita</from>
+    <heading>Kaha Ho Pravu</heading>
+    <body>Banbaas Kaisa Chal Raha Hai</body>
+    <color></color>
+</note>

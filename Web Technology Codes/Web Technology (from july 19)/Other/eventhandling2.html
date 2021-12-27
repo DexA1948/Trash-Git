@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling 2</title>
+</head>
+
+<body>
+    <h1 onmouseover="this.innerHTML = 'Vedas College'" onmouseout="this.innerHTML='Aberdeen College'">Aberdeen College</h1>
+
+    <p onmousedown="redcolor()" onmouseup="bluecolor()">Change Body Color</p>
+
+    Enter Name: <input type="text" id="fname" onmouseenter="caseChange()">
+    <h3 id="capitalid"></h3>
+</body>
+<script>
+    function caseChange() {
+        let n = document.getElementById("fname");
+        n.value = document.getElementById("capitalid").innerHTML = n.value.toUpperCase();
+    }
+
+    function redcolor() {
+        document.body.style.background = "red";
+    }
+
+    function bluecolor() {
+        document.body.style.background = "blue";
+    }
+</script>
+
+</html>

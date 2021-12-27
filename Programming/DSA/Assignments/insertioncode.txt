@@ -1,0 +1,42 @@
+void insertion(int p)
+{
+    if (p>length()+1)
+        {
+            printf("\nEnter valid position\n");
+        }
+    else
+    {
+        if (p==length()+1)
+            {
+                append();
+            }
+        else
+            {
+                struct node* temp;
+                temp=(struct node*)malloc(sizeof(struct node));
+
+                printf("\nEnter the data to append to the list:\n");
+                scanf("%d",&temp->data);
+                printf("\n%d is appended to the list.\n",temp->data);
+
+                if(p==1)
+                    {
+                        temp->address=head;
+                        head=temp;
+                    }
+                else if(p>1 && p<=length())
+                    {
+                        struct node* ptr=head;
+
+                        for(int i=1;i<p-1;i++)
+                        {
+                            ptr=ptr->address;
+                        }
+
+                        temp->address=ptr->address;
+                        ptr->address=temp;
+                    }
+            }
+    }
+
+}

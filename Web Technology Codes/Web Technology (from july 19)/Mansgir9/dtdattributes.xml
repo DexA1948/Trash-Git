@@ -1,0 +1,13 @@
+<!DOCTYPE note[
+<!-- note is a mixed element -->
+    <!ELEMENT note (#PCDATA|message|body)*>
+    <!ELEMENT body (#PCDATA)>
+    <!ELEMENT message (#PCDATA)>
+    <!ATTLIST note id CDATA "123">
+    <!ATTLIST message type CDATA (send, receive)"">
+]>
+
+<note>
+ Hello everyone &lt;29 <message>Hi</message>
+ I am not gonna party <message>Party</message>
+ </note>

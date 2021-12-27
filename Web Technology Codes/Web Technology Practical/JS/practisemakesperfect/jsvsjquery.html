@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <title>JS vs Jquery</title>
+    <script src="jquery.js"></script>
+</head>
+
+<body>
+    <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quas atque, natus quisquam
+        debitis minus saepe voluptas culpa animi expedita quis aspernatur dignissimos ullam ipsum dolores similique
+        porro accusamus distinctio?</p>
+    <p class="lorem">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias, vitae.</p>
+    <p class="lorem">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias, vitae.</p>
+    <p class="lorem">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias, vitae.</p>
+
+    <div id="output"></div>
+</body>
+
+<script>
+    myParagraphs = document.getElementsByClassName("lorem");
+    console.log(myParagraphs);
+
+    myParagraphs = $(".lorem");
+    console.log(myParagraphs);
+
+    myParagraphs = document.querySelectorAll("p.lorem");
+    console.log(myParagraphs);
+
+    myParagraphs = $("p.lorem");
+    console.log(myParagraphs);
+    
+    output = $("#output");
+    console.log(output.text());
+    output.html("<p>I love <br> you.");
+</script>
+
+</html>

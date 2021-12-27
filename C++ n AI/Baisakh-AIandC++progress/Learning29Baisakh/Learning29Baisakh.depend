@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1620820209 source:f:\study\learning29baisakh\learning29baisakh.cpp
+	<iostream>
+	<tuple>
+	<string>
+	<iostream>
+	<bits/stdc++.h>
+

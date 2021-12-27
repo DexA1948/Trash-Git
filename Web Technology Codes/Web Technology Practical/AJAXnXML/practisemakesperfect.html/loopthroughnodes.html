@@ -1,0 +1,41 @@
+<html>
+
+<body>
+    <table id="booktitles">
+        <tr>
+            <th>Titles</th>
+        </tr>
+    </table>
+</body>
+
+<script>
+    var xhttp = new XMLHttpRequest();
+    var bookXML;
+
+    xhttp.open("GET", "book.xml", true);
+    xhttp.send();
+
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            bookXML = this.responseXML;
+            console.log(bookXML.documentElement.childNodes);
+
+            var books = bookXML.getElementsByTagName("book");
+            // var title;
+
+            // for (var i = 0; i < titles.length; i++) {
+            //     title = "<tr><td>" + titles[i].childNodes[0].nodeValue + "</td></tr>";
+            //     document.getElementById("booktitles").innerHTML += title;
+            // }
+
+            var book = books[0];
+
+            while(book.nodeName == "book"){
+                document.getElementById("booktitles").innerHTML += "<tr><td>" + book.getElementsByTagName("title")[0].childNodes[0].nodeValue + "</td></tr>";
+                book = book.nextSibling.nextSibling;
+            }
+        }
+    }
+</script>
+
+</html>

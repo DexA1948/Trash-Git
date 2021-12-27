@@ -1,0 +1,9 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.a.com" xmlns="http://www.a.com" 
+elementFormDefault="qualified">
+<xs:element name="color" default="red">
+<xs:simpleType>
+    <xs:restriction base="xs:string">
+    </xs:restriction>
+</xs:simpleType>    
+</xs:element>
+</xs:schema>

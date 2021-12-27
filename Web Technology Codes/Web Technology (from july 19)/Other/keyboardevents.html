@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener</title>
+</head>
+
+<body>
+    <button id="btnid">Click Button</button>
+    <p id="pid"></p>
+    <h1 id="hid">test</h1>
+    <input id="keyid">Hello This is KeyID</input>
+    <div id="sid"></div>
+</body>
+
+<script>
+    document.getElementById("keyid").addEventListener("keyup", keyboardFunction);
+
+    function keyboardFunction() {
+        document.getElementById("sid").innerHTML = document.getElementById("keyid").value + ": Key is pressed";
+    }
+</script>
+
+</html>

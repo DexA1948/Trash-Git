@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <title>DOM using JS</title>
+</head>
+
+<body>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque placeat sed quas numquam, suscipit ipsam nisi quisquam quia voluptatum doloribus officiis? Ad excepturi recusandae ratione aperiam libero nemo necessitatibus delectus accusantium suscipit.</p>
+
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa sed nam unde dolorum quasi mollitia alias libero! Aliquid ipsum, voluptatibus consequuntur voluptas nesciunt minima neque odit aperiam ipsam architecto ad quis at.
+    </p>
+
+    <div id="testid">
+
+    </div>
+</body>
+
+<script>
+    elem = document.body;
+    elem.setAttribute("bgcolor", "red");
+
+    div = document.getElementById("testid");
+
+    ul = document.createElement("ul");
+
+    div.appendChild(ul);
+
+
+    for (i = 0; i < 5; i++) {
+        li = document.createElement("li");
+        li.innerHTML = "list Item";
+        ul.appendChild(li);
+    }
+
+    ul.appendChild(li);
+</script>
+
+</html>

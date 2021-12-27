@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <title>jQuery Events</title>
+    <script src="jquery.js"></script>
+</head>
+
+<style>
+    body {
+        margin: 20px;
+    }
+</style>
+
+<body>
+    <h2>JS8: jQuery Events</h2><br>
+    <div id="parent">
+        <p id="id01">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod, quae?</p>
+    </div>
+
+    <div id="formevents">
+        <form action="">
+            Name: <input type="text"><br>
+            Number: <input type="number" value=1><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+
+<script>
+$(document).ready(function(){
+    // window events
+    $(window).resize(function(){
+        alert("Window resized: Height, Width = " + window.innerHeight + ", " + window.innerWidth);
+    });
+
+    // keyboard events
+    $("input[type='number']").keypress(function() {
+       $(this)[0].value = Number($(this)[0].value) + 1; 
+    });
+
+    // mouse events
+    $("#id01").mouseenter(function() {
+       $(this).css("background-color", "yellow"); 
+    });
+
+    $("#id01").mouseleave(function() {
+       $(this).css("background-color", ""); 
+    });
+
+    // on to attach one or more events
+    $("div").on({
+        click:function(){
+            $(this).css("border", "2px solid black");
+        },
+
+        dblclick:function(){
+            $(this).css("border", "");
+        }
+    });
+
+    // form events
+    $("input").focus(function(){
+        $(this).css("background-color", "skyblue");
+    });
+
+    $("input").blur(function(){
+        $(this).css("background-color", "");
+    });
+});
+</script>
+
+</html>

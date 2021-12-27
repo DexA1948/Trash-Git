@@ -1,0 +1,35 @@
+hello this my note for html for practice sessions.
+
+*Practice session Asar 16, 2078BS, Thursday*
+
+Span tag:
+Span tag is a inline container used to mark up a part of a text, or a part of document. 
+The <span> tag is easily styled by CSS or manipulated with JavaScript using class or Id attribute.
+The <span> yag is much like <div> element, but <div> is a block-level element and <span> is an inline element. 
+
+Block and Inline Elements:
+Every html element has a default display value, depending upon what type of element it is. There are two display values: block and inline.
+A block-level element always starts on a new line. 
+A block-level element always takes up the full width available (streches out to the left and right as far as it can)
+A block-level element has a top and a bottom margin, whereas an inline element doesnot.
+
+
+HTML Attributes:
+All HTML elements can have attributes.
+Attributes provides additional information about elements.
+Attributes are always specified in the start tag.
+Attributes usually come in name/value pairs like: name="value".
+
+HTML Styles:
+The html style attribute us used to add styles to an element, such as color, font, size, and more.
+<tagnmae style="property:value;">
+<p style="color:red;">
+The property is a CSS property. The vaue is a CSS value.
+
+HTML text formatting:
+<big>This is Big.</big>
+<mark>This is a marked text.</mark>
+<del>What is a deleted text.</del>
+<em>This must be emphasized.</em>
+<hr>
+<ins>Inserted text</ins>

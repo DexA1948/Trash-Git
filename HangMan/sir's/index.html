@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>HangMan</title>
+    <link href="hangman.css" rel="stylesheet">
+    <script src="jquery-3.6.0.js"></script>
+    <script src="hangman.js"></script>
+</head>
+
+<body onload="generateWord()">
+    <div id="sidebox">
+        <h2>This is Hangman Game</h2>
+        <img src="hangmanparts/stand.PNG" class="stand">
+        <img src="hangmanparts/bar.PNG" class="bar">
+        <img src="hangmanparts/head.PNG" class="head" id="imageid0">
+        <img src="hangmanparts/neck.PNG" class="neck" id="imageid1">
+        <img src="hangmanparts/lefthand.PNG" class="lefthand" id="imageid2">
+        <img src="hangmanparts/righthand.PNG" class="righthand" id="imageid3">
+        <img src="hangmanparts/stomach.PNG" class="stomach" id="imageid4">
+        <img src="hangmanparts/rightfoot.PNG" class="rightfoot" id="imageid5">
+        <img src="hangmanparts/leftfoot.PNG" class="leftfoot" id="imageid6">
+        <!-- <div id="boxid0" class="box">Wrong</div>
+        <div id="boxid1" class="box">Wrong</div>
+        <div id="boxid2" class="box">Wrong</div>
+        <div id="boxid3" class="box">Wrong</div>
+        <div id="boxid4" class="box">Wrong</div>
+        <br><br><br> -->
+        <!-- <div id="boxid5" class="box">Wrong</div>
+        <div id="boxid6" class="box">Wrong</div>
+        <div id="boxid7" class="box">Wrong</div>
+        <div id="boxid8" class="box">Wrong</div>
+        <div id="boxid9" class="box">Wrong</div> -->
+    </div>
+    <br><br><br>
+    <h4 id="hideword">Hidden Word</h4>
+    <div id="inputarea">
+        <!-- dynamic input box are created here -->
+    </div>
+    <br><br><br>
+    <div>Guess here: <input type="text" name="guess" id="guessid" />
+        <button onclick="guessMe()" id="btnid">Just Guess</button>
+        <span id="incorrectid" style="color: red;">Wrong letters: </span>
+    </div>
+</body>
+
+</html>

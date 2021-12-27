@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <title>HTML Events Inline</title>
+    <link rel="shortcut icon" href="images/html.png" type="image/x-icon">
+</head>
+
+<style>
+    body {
+        margin: 20px;
+    }
+</style>
+
+<body>
+    <h2>HTML5: HTML EVENTS</h2><br>
+    <button onclick="this.innerHTML = Date()">The time is?</button><br>
+    <hr>
+    
+    <form id="form1" onsubmit="alert('Submitted')">
+        <div id="value_here"></div>
+        Name: <input type="text" onchange="document.getElementById('value_here').innerText=this.value">
+        <input type="submit" value="Submit">
+    </form>
+    <hr>
+
+    Keyboard Events:<br>
+    <div id="show_events"></div>
+    <input type="text" onkeydown="document.getElementById('show_events').innerText='Key Down'"
+        onkeypress="document.getElementById('show_events').innerText='Key Pressed'"
+        onkeyup="document.getElementById('show_events').innerText='Key Up'"><br>
+    <hr>
+
+    Mouse Events:
+    <div id="mouse_events" style="width: 100px; height: 100px; background-color: aliceblue;"
+        onclick="document.getElementById('mouse_events').innerText='Mouse Clicked'"
+        onwheel="document.getElementById('mouse_events').innerText='Mouse Wheel'"></div>
+</body>
+
+</html>

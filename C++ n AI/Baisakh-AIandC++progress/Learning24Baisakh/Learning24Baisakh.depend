@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1620375972 source:f:\study\learning24baisakh\learning24baisakh.cpp
+	<iostream>
+	<vector>
+	<iostream>
+	<vector>
+	<bits/stdc++.h>
+

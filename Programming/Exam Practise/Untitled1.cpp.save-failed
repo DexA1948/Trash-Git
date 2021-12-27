@@ -1,0 +1,25 @@
+#include<iostream>
+#include<fstream>
+
+using namespace std;
+
+int main()
+{
+    ifstream fin;
+
+    fin.open("sample.txt");
+
+    string line;
+
+    while(fin)
+    {
+        getline(cin,line);
+
+        if(line = -1)
+            break;
+
+        fin>>line>>endl;
+    }
+
+    return 0;
+}

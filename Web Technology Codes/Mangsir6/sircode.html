@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading The Sml Elements</title>
+</head>
+
+<body>
+    <h3>My Favorite books collection</h3>
+    <button onclick="loadXMLFile()">Get The Books</button>
+
+    <table border="2" width="50%">
+        <tr>
+            <th>Title</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td id="title"></td>
+            <td id="price"></td>
+        </tr>
+    </table>
+    <script>
+        function loadXMLFile() {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    listBook(this);
+                }
+            };
+            xmlhttp.open("GET", "BookStore.xml", true);
+            xmlhttp.send();
+        }
+
+        function listBook(data) {
+            var tags, i, xmldoc, titletxt = "",
+                pricetxt = "";
+            xmldoc = data.responseXML; //xml data is stored in xmldoc
+            booktags = document.getElementsByTagName("book");
+            titletags = xmldoc.getElementsByTagName("title"); //all titleelements or tags
+            pricetags = xmldoc.getElementsByTagName("price");
+            for (i = 0; i < titletags.length; i++) {
+                titletxt += titletags[i].childNodes[0].nodeValue + "<br>";
+                document.getElementById("title").innerHTML = titletxt;
+            }
+            for (i = 0; i < pricetags.length; i++) {
+                pricetxt += pricetags[i].childNodes[0].nodeValue + "<br>";
+                document.getElementById("price").innerHTML = pricetxt;
+            }
+        }
+    </script>
+</body>
+
+</html>

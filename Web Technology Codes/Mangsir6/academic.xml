@@ -1,0 +1,30 @@
+<academic>
+    <college id="149">
+        <name>Vedas College</name>
+        <address>Jawlakhel</address>
+        <contact>01443506</contact>
+        <programs>BCA, CSIT, BBM</programs>
+    </college>
+
+    <college id="150">
+        <name>Nagarjuna</name>
+        <address>Sankhamul</address>
+        <contact>0144444</contact>
+        <programs>BIM, BBS, CSIT</programs>
+    </college>
+
+    <college id="151">
+        <name>New Summit</name>
+        <address>Baneshwor</address>
+        <contact>01555555</contact>
+        <programs>BBA, BCA, CSIT</programs>
+    </college>
+
+    <college id="152">
+        <name>College Of Applied Business</name>
+        <address>Hadigaun</address>
+        <contact>01511111</contact>
+        <programs>CSIT, BIM, BCA</programs>
+    </college>
+
+</academic>

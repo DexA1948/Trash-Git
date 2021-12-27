@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<student xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cw_xml.xsd">
+    <id>123</id>
+    <name>Deshant</name>
+    <batch>2078</batch>
+    <faculty>CSIT</faculty>
+    <address>BNP-2, Chitwan</address>
+</student>

@@ -1,0 +1,63 @@
+/* .box {
+    border: 3px solid blue;
+    display: inline;
+    padding: 5px;
+    margin: 5px;
+    color: white;
+} */
+
+#optionid {
+    width: 25px;
+}
+
+#btnid {
+    background-color: green;
+    color: whitesmoke;
+}
+
+.bar {
+    position: absolute;
+    top: 62px;
+    left: 87px;
+}
+
+.head {
+    position: absolute;
+    top: 75px;
+}
+
+.neck {
+    position: absolute;
+    top: 125px;
+    left: 158px;
+}
+
+.lefthand {
+    position: absolute;
+    top: 135px;
+    left: 145px;
+}
+
+.righthand {
+    position: absolute;
+    top: 135px;
+    left: 170px;
+}
+
+.stomach {
+    position: absolute;
+    top: 145px;
+    left: 165px;
+}
+
+.leftfoot {
+    position: absolute;
+    top: 205px;
+    left: 172px;
+}
+
+.rightfoot {
+    position: absolute;
+    top: 205px;
+    left: 130px;
+}

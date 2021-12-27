@@ -1,0 +1,25 @@
+<html>
+
+<style>
+    body {
+        margin: 20px;
+    }
+</style>
+
+<body>
+    <h2>JS1: Alert, Prompt and Confirm Dialog Boxes in JS</h2>
+    <p>Multiplying two numbers using dialog boxes.</p>
+</body>
+
+<script>
+    let a = prompt("Enter first number", 10);
+    let b = prompt("Enter second number", 10);
+    let s = confirm("Do you want to multiply " + a + " and " + b);
+    if (s) {
+        alert("The product of " + a + " and " + b + " is: " + a * b);
+    } else {
+        document.body.innerText += "Reload page to multiply different numbers";
+    }
+</script>
+
+</html>

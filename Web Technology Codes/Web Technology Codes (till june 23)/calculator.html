@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<style>
+    *{
+        margin: 0;
+    }
+    #calcframe{
+        background-color: grey;
+        padding: 0px;
+        margin: 10% auto;
+    }
+
+    /*First row with display and clear button*/
+    #caldispnclearrow{
+        padding: 0px;
+        margin: 0px;
+        background-color: black;
+    }
+    #calcdisp{
+        padding: 0px;
+        margin: 0px;
+    }
+    #clr{
+        padding: 0px;
+        margin: 0px;
+    }
+    #clrbtn{
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+        border: 2px solid red;
+        height: 100%;
+    }
+
+    /*Status Display*/
+    #statusdisp{
+        margin: 0;
+        padding: 0;
+    }
+
+    #counter{
+        margin: 0;
+        padding: 0;
+    }
+
+    #operator{
+        margin: 0;
+        padding: 0;
+        float: right;
+    }
+
+    #operatorinp{
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        border: 2px solid powderblue;
+        border-radius: 0;
+        font-size: 20px;
+        width: 100%;
+    }
+
+    #counterinp{
+        padding: 0;
+        margin: 0 auto;
+        width: 70%;
+        height: 100%;
+        border: 2px solid greenyellow;
+        border-radius: 0;
+        font-size: 20px;
+    }
+
+    #counterinplabel{
+        width: 30%;
+        text-align: center;
+        font-weight: bolder;
+        font-size: 20px;
+        background-color: white;
+        height: 100%;
+        margin: 0;
+    }
+
+    /*Second to fifth row of buttons*/
+    .numberrow{
+        padding: 0px;
+        margin: 0px;
+        background-color: black;
+    }
+
+    .numberrow .col-3{
+        padding: 0%;
+    }
+
+    .numberrow button{
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        border: 2px solid red;
+    }
+</style>
+<body>
+        <div class="row">
+            <div class="col-10" name="calcframe" id="calcframe">
+                
+                <div class="row" name="statusdisp" id="statusdisp">
+                    <div class="col-7"></div>
+                    <div class="col-3" name="counter" id="counter">
+                        <label for="counterinp" name="counterinplabel" id="counterinplabel">Ans:</label><input type="text" id="counterinp" value="0">
+                    </div>
+                    <div class="col-2" id="operator">
+                        <input type="text" id="operatorinp" value="+">
+                    </div>
+                </div>
+
+                <div class="row" name="caldispnclearrow" id="caldispnclearrow">
+                    <div class="col-10" name="calcdisp" id="calcdisp">
+                        <input type="text" id="numinp" style="width: 100%;">
+                    </div>
+                    <div class="col-2" name="clr" id="clr">
+                        <button onclick="document.getElementById('numinp').value=null;" id="clrbtn">Clear</button>
+                    </div>
+                </div>
+
+                <div class="row numberrow" name="123p" id="123p">
+                    <div class="col-3">
+                        <button name="btn1" id="btn1" value="1" onclick="pressbtn(value)">1</button>
+                    </div>
+                    <div class="col-3">
+                        <button name="btn2" id="btn2" value="2" onclick="pressbtn(value)">2</button>
+                    </div>
+                    <div class="col-3">
+                        <button name="btn3" id="btn3" value="3" onclick="pressbtn(value)">3</button>
+                    </div>
+                    <div class="col-3">
+                        <button name="btnp" id="btnp" value="+" onclick="pressbtn(value)">+</button>
+                    </div>
+                </div>
+
+                <div class="row numberrow" name="456min" id="456min">
+                    <div class="col-3">
+                        <button name="btn4" id="btn4" value="4" onclick="pressbtn(value)">4</button>
+                    </div>
+                    <div class="col-3">
+                        <button name="btn5" id="btn5" value="5" onclick="pressbtn(value)">5</button>
+                    </div>
+                    <div class="col-3">
+                        <button name="btn6" id="btn6" value="6" onclick="pressbtn(value)">6</button>
+                    </div>
+                    <div class="col-3">
+                        <button name="btnmin" id="btnmin" value="-" onclick="pressbtn(value)">-</button>
+                    </div>
+                </div>
+                
+                <div class="row numberrow" name="789mul" id="789mul">
+                    <div class="col-3">
+                        <button name="btn7" id="btn7" value="7" onclick="pressbtn(value)">7</button>
+                    </div>
+                    <div class="col-3">
+                        <button name="btn8" id="btn8" value="8" onclick="pressbtn(value)">8</button>
+                    </div>
+                    <div class="col-3">
+                        <button name="btn9" id="btn9" value="9" onclick="pressbtn(value)">9</button>
+                    </div>
+                    <div class="col-3">
+                        <button name="btnmul" id="btnmul" value="*" onclick="pressbtn(value)">*</button>
+                    </div>
+                </div>
+
+                <div class="row numberrow" name="dezd" id="dezd">
+                    <div class="col-3">
+                        <button name="btndot" id="btndot" value="." onclick="pressbtn(value)">.</button>
+                    </div>
+                    <div class="col-3">
+                        <button name="btnet" id="btnet" value="=" onclick="pressbtn(value)">=</button>
+                    </div>
+                    <div class="col-3">
+                        <button name="btn0" id="btn0" value="0" onclick="pressbtn(value)">0</button>
+                    </div>
+                    <div class="col-3">
+                        <button name="btndiv" id="btndiv" value="/" onclick="pressbtn(value)">/</button>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+
+<script>
+    function operate(operand2){
+        operand1 = document.getElementById('counterinp').value;
+        operator = document.getElementById('operatorinp').value;
+
+        if(operator=="+"){
+            return parseInt(operand1) + parseInt(operand2);
+        }
+        else if(operator=="-"){
+            return parseInt(operand1) - parseInt(operand2);
+        }
+        else if(operator=="*"){
+            return parseInt(operand1) * parseInt(operand2);
+        }
+        else if (operator=="/"){
+            return parseInt(operand1) / parseInt(operand2);
+        }
+        else{
+            return operand2;
+        }
+    }
+    function pressbtn(value){
+        if(value>=0 && value<=9 || value=="."){
+            document.getElementById('numinp').value += value;
+        }
+        else if(value=="+"||value=="-"||value=="*"||value=="/"||value=="="){
+            operand = document.getElementById('numinp');
+
+            if (operand.value==""){
+                document.getElementById('operatorinp').value = value; 
+            }
+            else{
+                let result = operate(operand.value);
+                operand.value=null;
+                document.getElementById('counterinp').value = result;
+                document.getElementById('operatorinp').value = value;
+            }
+            
+        }
+    }
+</script>
+</html>

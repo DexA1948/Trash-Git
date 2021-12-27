@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Confirm</title>
+    </head>
+    <body>
+        <h1 id="demoid" style="color: gold;"></h1>
+    </body>
+
+<script>
+    let status = confirm("Are you sure to book the flight?");
+
+    if(status==true){
+        Booking();
+    }
+    else{
+        NotBooking();
+    }
+
+    function Booking(){
+        document.getElementById("demoid").innerHTML = "Your flight has been booked";
+        alert("Your Flight has been booked!");
+    }
+
+    function NotBooking(){
+        alert("Its okat see you next time");
+        document.getElementById("demoid").innerHTML = "See You Next Time";
+    }
+</script>
+
+</html>

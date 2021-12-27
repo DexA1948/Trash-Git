@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Gyankunja - Sign Up</title>
+</head>
+<link rel="stylesheet" type="text/css" href="signup.css"/>
+<body>
+    <img class="backgroundimage" src="images\bg signup.jpg" alt="SignupPicture">
+    <div class="container">
+        <div class="my-form">
+            <div class="signup center">
+                <!-- PHP Validation -->
+                <?php require "signupvalidation.php"; ?>
+
+                <h2>Gyankunja Signup Form</h2>
+            </div>
+            <!-- <p><span class="error">* required field</span></p> -->
+            <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                <div class="single-input">
+                    <span> <i class="fas fa-user"></i></span>
+                    Name: <input type="text" name="name" value="<?php echo $name; ?>">
+                    <span class="error">* <?php echo $nameErr; ?></span>
+                    <br><br>
+                </div>
+    
+                <div class="single-input">
+                    <span><i class="fa fa-paper-plane"></i></span>
+                    E-mail: <input type="text" name="email" value="<?php echo $email; ?>">
+                    <span class="error">* <?php echo $emailErr; ?></span>
+                    <br><br>
+                </div>
+    
+                <div class="single-input">
+                    <span><i class="fas fa-phone"></i></span>
+                    Phone Number: <input type="text" name="phoneno" value="<?php echo $phoneno; ?>">
+                    <span class="error">* <?php echo $phonenoErr; ?></span>
+                    <br><br>
+                </div>
+    
+                <div class="single-input">
+                    <span><i class="far fa-calendar-alt"></i></span>
+                    Date of Birth: <input type="date" name="dob" value="<?php echo $dob; ?>">
+                    <span class="error">* <?php echo $dobErr; ?></span>
+                    <br><br>
+                </div>
+    
+               <div class="single-input">
+                   <span><i class="fas fa-file-alt"></i></span>
+                    Other Info: <input type="text" name="otherinfo" value="<?php echo $otherinfo; ?>">
+                    <span class="error"><?php echo $otherinfoErr; ?></span>
+                    <br><br>
+               </div>
+    
+               <div class="single-input">
+                   <span><i class="fas fa-lock"></i></span>
+                    Password: <input type="password" name="password">
+                    <span class="error">* <?php echo $passwordErr; ?></span>
+                    <br><br>
+               </div>
+    
+               <button> <input class="button" type="submit" name="submit" value="Sign Up">
+               </button>
+               <span>
+                <h6 class="center" style="color: black">
+                  Already have an account?
+                  <a style="color: black" href="loginForm.html" style="color: white"
+                    >Login here.</a
+                  >
+                </h6>
+              </span>
+            </form>
+            </form>
+        </div>
+        <a href="Gyan-kunja.html">
+            <img class="logo" src="images/logo/Gyan Kunj-12.png"
+          /></a>
+    </div>
+</body>
+
+</html>

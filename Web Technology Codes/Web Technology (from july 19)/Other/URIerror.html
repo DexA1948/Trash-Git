@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URI error</title>
+</head>
+
+<body>
+    <p id="uriid"></p>
+</body>
+
+<script>
+    let url = "www.google.com%";
+    try {
+        uri = decodeURI(url);
+    } catch (err) {
+        document.getElementById("uriid").innerHTML = err.name + " and " + err.message;
+    } finally {
+        document.write(url);
+    }
+</script>
+
+</html>

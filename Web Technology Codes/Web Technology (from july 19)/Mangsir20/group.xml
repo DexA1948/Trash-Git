@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<person xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="group.xsd">
+    <firstname>Dexu</firstname>
+    <lastname>Devkota</lastname>
+    <birthday>2011-11-11</birthday>
+    <country>Nepal</country>
+</person>

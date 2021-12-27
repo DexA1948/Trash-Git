@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Document</title>
+    </head>
+
+    <body>
+        <p id="id1"></p>
+        <p id="id2"></p>
+        <p id="id3"></p>
+        <p id="id4"></p>
+        <p id="id5"></p>
+        <p id="id6"></p>
+    </body>
+
+    <script>
+        var pi = Math.PI;
+        document.getElementById("id1").innerHTML = pi;
+
+        let current_date = new Date();
+        document.getElementById("id2").innerHTML = current_date;
+        document.getElementById("id3").innerHTML = current_date.toLocaleString();
+        document.getElementById("id4").innerHTML = current_date.toLocaleDateString();
+        document.getElementById("id5").innerHTML = current_date.getFullYear();
+
+        let created_elem = document.createElement('p');
+        created_elem.innerHTML = current_date.getHours();
+        let elem = document.getElementById("id6");
+        elem.appendChild(created_elem);
+        created_elem2 = document.createElement('b');
+        created_elem2.innerHTML = current_date.getMilliseconds();
+        elem.replaceChild(created_elem2, created_elem);
+
+        setTimeout(function(){
+            window.location.reload(1);
+        }, 60000); //1000 milliseconds
+    </script>
+</html>

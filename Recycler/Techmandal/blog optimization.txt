@@ -1,0 +1,81 @@
+Blog Posts Optimization Guidelines : TechMandal
+
+Basic SEO
+Keyword Research for the post 
+Tools
+UberSuggest
+Grammarly for Post Grammar
+Google Trends
+Google Keyword planner
+Ahref Paid
+Semrush Paid
+Types
+Primary Keyword
+Secondary keyword
+Keyword in all around the content
+
+
+Primary Keyword to be present in Post TItle within the first 50 characters of the title (Google displays around 60 character of title in desktop and around 50 on mobile devices) - [Titles are in H1 tags]
+Focus keyword in the Meta Description (Primary Focus Keyword only)
+SEO Description is the snippet that appears just below the title in the SERP. Its job is two-fold. It gives Google and other search engines a glimpse of what the post is about, which helps them make ranking decisions. It also gives the users a reason to click through to our website rather than click to any other website.
+The generated SEO Description will use data from the following areas of length from 120 to 160 characters.
+Custom Meta Description Set for the post
+Description Templates set in Titles and Meta settings in Rank Math
+Paragraph with the focus keyword in it
+Post Excerpt
+The first paragraph of the content in the post
+Focus keyword in the URL
+Focus keyword at the beginning of the content.
+Primary focus keyword to be present in the first 10% of the blog post.
+
+
+Focus keyword in the content (Runs of all focus keywords)
+Considers both singular and plural form of the keywords as one
+Avoids Keyword Stuffing
+
+
+Overall content length
+Words in the post has a positive correlation with the rankings
+At least 600+ words
+
+Additional SEO
+Focus keywords in Subheading (Primary and Secondary focus keywords) [Sub Headings are in H2 tags]
+Focus Keyword in Image Alt Attributes (Primary focus keywords)
+Maintain the keyword Density [Primary and Secondary Focus Keywords]
+Avoid Keyword Stuffing
+But a low keyword density is better than a high keyword density.
+Very High keyword density may direct google to kick our blog out of search results
+No particular perfect keyword density but researchers say 1-1.5% is around sufficient. 
+URL Length
+Shorter URL Length has a higher chance of ranking in the SERPs.
+
+
+Linking to External Sources
+Out-Bound Links are good.
+Linking to External Content with a Followed Link
+Linking to Internal Resources
+Links to other posts on our website
+Links to other subdomain on  our main domain
+Links to the main domain form the sub domain
+Focus Keyword Uniqueness (Primary focus keywords only)
+Using the same keyword in more than one blog posts
+Keyword  duplicacy  may also lead google to decide the duplicacy in the content. 
+Title Readability:
+Spending more time in writing the content and less on writing the title is not a good strategy.
+Focus Keyword at the beginning of the SEO title (Only for Primary Keyword)
+Number in the Title
+Content Readability: 
+Focus on the presentation of the content.
+Use a Table of Content for the content
+Use of Short Paragraphs
+Use of Explanatory Images
+Use of Media localhost
+
+
+GIfs
+Videos
+Animations
+Etc.
+
+
+

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/983b20a9f5.js" crossorigin="anonymous"></script>
+</head>
+
+<style>
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        background-color: rgb(109, 224, 224);
+        font-family:Verdana;
+    }
+
+    .backpiece {
+        width: 30%;
+        margin: 5% auto;
+    }
+
+    #title {
+        text-align: left;
+        background-color: white;
+        padding: 2%;
+        border: 1px;
+        border-radius: 0;
+        color: white;
+    }
+
+    #forms {
+        background-color: white;
+        padding: 4%;
+        border-radius: 0;
+    }
+
+    .email,
+    .password, .username {
+        font-size: 10px;
+        border: 1px solid gray;
+        border-radius: 10px;
+    }
+
+    .fas,
+    .fa-user,
+    .fa-lock {
+        background-color: silver;
+        font-size: 20px;
+        padding: 12px 14px 32px 15px;
+        border-radius: 10px 0 0 10px;
+    }
+
+    input[type=text],
+    input[type=password] {
+        width: 75%;
+        padding: 0px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        resize: vertical;
+        outline: none;
+        border: none;
+        font-size: large;
+        /* border: 0px solid #c1c1c1;
+    width: 100%;
+    outline: none;
+    height: 30px;
+    font-size: 18px; */
+    }
+
+    a {
+        text-decoration: underline;
+        color: white;
+    }
+
+    .below {
+        font-size: x-large;
+        margin-top: 5%;
+        width: 100%;
+    }
+
+    input[type=button] {
+        background-color: teal;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        padding: 10px 22px;
+        text-decoration: none;
+        cursor: pointer;
+        width: 75%;
+        margin: 4px auto;
+        font-size: x-large;
+    }
+
+    .below p {
+        text-align: center;
+    }
+
+    @media screen and (max-width: 1130px) {
+            .backpiece{
+            width: 80%;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+            .backpiece{
+            width: 100%;
+        }
+    }
+</style>
+
+<body>
+    <div class="backpiece">
+        <div id="title">
+            <p style="color: black; font-size: xx-large;"><b>Sign Up</b></p><br>
+            <p style="font-size:small; color: gray;">Please fill in this form to create an account!</p> 
+        </div>
+        <hr color="gray" size="1px">
+        <div id="forms">
+            <div class="username">
+                <span><i class="fas fa-user"></i></span>
+                <input type="text" placeholder="UserName">
+            </div>
+            <br>
+            <div class="email">
+                <span><i class="fas fa-paper-plane"></i></span>
+                <input type="text" placeholder="Email Address">
+            </div>
+            <br>
+            <div class="password">
+                <span><i class="fas fa-lock"></i></span>
+                <input type="text" placeholder="Password">
+            </div>
+            <br>
+            <div class="password">
+                <span><i class="fas fa-unlock"></i></span>
+                <input type="text" placeholder="Confirm Password">
+            </div>
+            <br>
+            <p><input type="button" value="SignUp"></p>
+            <br>
+            <p><input type="checkbox" id="agreement" name="agreement" value="agreement"><label for="agreement">I accept the <a href="https://www.termsfeed.com/legal/terms-of-use/" style="color: teal;text-decoration: none;">Terms of Use</a> & <a href="https://www.termsfeed.com/legal/privacy-policy/" style="color: teal;text-decoration: none;">Privacy Policy</a></label></p>
+        </div>
+    </div>
+    <p style="color: white; text-align: center; font-size: small; margin: -3%;">Already have an account?<a href="loginpage.html">Login Here.</a></p>
+</body>
+
+</html>

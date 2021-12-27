@@ -1,0 +1,30 @@
+<!DOCTYPE NEWSPAPER [
+    <!ELEMENT NEWSPAPER (ARTICLE+)>
+    <!ELEMENT ARTICLE (HEADLINE, BYLINE, LEAD, BODY, NOTES)>
+    <!ELEMENT HEADLINE (#PCDATA)>
+    <!ELEMENT BYLINE (#PCDATA)>
+    <!ELEMENT LEAD (#PCDATA)>
+    <!ELEMENT BODY (#PCDATA)>
+    <!ELEMENT NOTES (#PCDATA)>
+    <!ATTLIST ARTICLE AUTHOR CDATA #REQUIRED>
+]>
+
+<NEWSPAPER>
+    <ARTICLE AUTHOR="Deshant Devkota">
+        <HEADLINE>Handsome actor, Subash is getting married this mangsir</HEADLINE>
+        <BYLINE>His girl fan following is devastated with this news.</BYLINE>
+        <LEAD>Subash and his long time girlfriend Disha Patani have finally decided to tie the knot at Hayat Regency this weekend.</LEAD>
+        <BODY>
+            Kathmandu, 2021-11-25,
+                After a long time suspicion from fans all around the world, its clear that nations hearthrob actor Subash is finally getting married with his long time girlfriend actress Disha Patani this Mangsir11.
+
+                List of invitations include famous names like PM KP Oli, Actor Ranveer Singh, Deepika Padukone, Brad Pitt, Jennifer Lawrence. Fans speculate that wedding, that is going to be conducted at Hayat Regency, is probably going to hit budget of over 200 millions which is going to be biggest marriage celebration this year.
+
+                Fans seems to be happy with this decision. However the girl fandom of handsome actor Subash are already in the frenzy following this news begging actor not to marry.
+
+
+                lorem ipsum.......................
+        </BODY>
+        <NOTES></NOTES>
+    </ARTICLE>
+</NEWSPAPER>

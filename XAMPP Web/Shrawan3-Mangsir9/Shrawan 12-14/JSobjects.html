@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Objects</title>
+</head>
+
+<body>
+    <div id="testid">
+        <p id="testidp1"></p>
+        <p id="testidp2"></p>
+    </div>
+</body>
+<script>
+    //In JS Objects are king
+    //you can see objects everywhere
+    //Objects can be constructed in 4 ways
+    //All JS objects inheri properties and methods from a prototype
+    //Object prototype is on the top of prototype inheritance chain
+    //Create a object and check to see, it gives a [[Prototype]]:Object there
+    //JS object is collection of unordered properties, this properties has attributes such as iswritable, enumerable etc
+    //JS objects are containers for named values called properties and methods
+
+    //Object ma hamle property add garna sakxam direct
+    let person = {
+        name: "Deshant",
+        age: 21
+    };
+    console.log("person: Before adding Address:");
+    console.log(person);
+    person.address = "Kshetrapur"
+    console.log("person: After adding Address:");
+    console.log(person);
+
+    //Tara prototype ma direct property add garna nasakiyela
+    class Person {
+        constructor(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+    }
+    console.log(Person);
+    let person2 = new Person("Prashant", 21);
+    //esma add garna sakinna tesari chai
+    //Person.address = "Sydney";
+    //so we do this instead
+    Person.prototype.address = "Kshetrapur";
+    let person3 = new Person;
+    console.log(person2);
+    console.log(person3);
+    console.log(Person);
+</script>
+
+</html>

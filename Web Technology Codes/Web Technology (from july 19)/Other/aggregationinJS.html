@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aggregation in JavaScript</title>
+</head>
+
+<body>
+    <p id="testid"></p>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Rollno</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Country</th>
+        </tr>
+
+        <tr>
+            <td id="nameid"> </td>
+            <td id="ageid"> </td>
+            <td id="rollid"> </td>
+            <td id="cityid"> </td>
+            <td id="stateid"> </td>
+            <td id="countryid"> </td>
+        </tr>
+    </table>
+</body>
+
+<script>
+    function Address(city, state, country) {
+        this.city = city;
+        this.state = state;
+        this.country = country;
+    }
+
+    function Student(name, age, rollno, address) {
+        this.name = name;
+        this.age = age;
+        this.rollno = rollno;
+        this.address = address;
+    }
+
+    //creating objects of both constructor functions
+    let add = new Address('Chitwan', 'Bagmati', 'Nepal');
+    let std = new Student('Subash', 20, 10, add);
+
+    document.getElementById("nameid").innerHTML = std.name;
+    document.getElementById("ageid").innerHTML = std.age;
+    document.getElementById("rollid").innerHTML = std.rollno;
+    document.getElementById("cityid").innerHTML = std.address.city;
+    document.getElementById("stateid").innerHTML = std.address.state;
+    document.getElementById("countryid").innerHTML = std.address.country;
+</script>
+
+</html>

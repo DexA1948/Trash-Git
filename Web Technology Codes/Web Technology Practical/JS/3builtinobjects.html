@@ -1,0 +1,65 @@
+<html>
+<style>
+    body {
+        margin: 20px;
+    }
+</style>
+
+<body>
+    <h2>JS3: Built-In-Object in JS</h2>
+
+</body>
+
+<script>
+    // JS Number Object
+    let x = new Number(10);
+    console.log(x);
+    let y = new Number(20);
+    console.log(y);
+    let sum = x + y;
+    console.log(sum);
+    console.log(x.toExponential());
+
+    // JS String Object
+    let name = new String("Deshant");
+    console.log("The length of your name " + name + " is " + name.length);
+
+    // JS Boolean Object
+    let findout = new Boolean(1);
+    console.log(findout);
+
+    // JS Date Object
+    let today = new Date();
+    console.log(today);
+    let somedate = new Date("Thursday, Dec 12, 2021");
+    console.log(somedate);
+
+    // JS RegExp Object
+    let reg = /^[a-zA-Z-' ]*$/;
+    let fname = "Deshant123";
+    let fname2 = "Deshant Devkota";
+    if (!fname.match(reg)) {
+        console.log("Name can only contain alphabets and whitespaces");
+    }
+    if (!fname2.match(reg)) {
+        console.log("Name can only contain alphabets and whitespaces");
+    }
+
+    // JS FORM Object
+    let f = document.createElement("form");
+    f.setAttribute("id", "myForm");
+    document.body.appendChild(f);
+
+    let fc = document.createElement("input");
+    fc.setAttribute("type", "text");
+    fc.setAttribute("value", "Deshant");
+    document.getElementById("myForm").appendChild(fc);
+
+    // JS Window Object
+    console.log("This window has width: "+window.innerWidth);
+
+    // JS Math object
+    console.log("The value of pi is: ", Math.PI);
+</script>
+
+</html>

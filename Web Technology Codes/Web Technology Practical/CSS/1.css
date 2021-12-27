@@ -1,0 +1,9 @@
+#external_css{
+    width: 100px;
+    height: 100px;
+    margin: 3px;
+    padding: 10px;
+    border: 2px solid rgb(102, 19, 9);
+    box-shadow: 10px 10px 10px rgb(107, 20, 11);
+    float: right;
+}

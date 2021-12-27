@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener</title>
+</head>
+
+<body>
+    <button id="btnid">Click Button</button>
+    <p id="pid"></p>
+    <h1 id="hid">test</h1>
+</body>
+
+<script>
+    document.getElementById("btnid").addEventListener("click", testFunction);
+    //click is an event, testFunction is a js function that is called whenever a button of btnid is clicked.
+
+    function testFunction() {
+        document.getElementById("pid").innerHTML = "You have clicked the above button";
+    }
+
+    document.getElementById("hid").addEventListener("mouseover", mouseFunction);
+
+    function mouseFunction() {
+        document.getElementById("hid").innerHTML = "Mouse is over me";
+    }
+</script>
+
+</html>

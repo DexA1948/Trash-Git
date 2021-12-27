@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing Colors</title>
+</head>
+
+<style>
+    #form{
+        margin: auto;
+        padding: 5%;
+        width: 50%;
+        background-color: black;
+        color: red;
+        border: 3px solid red;
+        border-radius: 50%;
+        font-size: large;
+    }
+
+    ::placeholder{
+        color: red;
+    }
+</style>
+
+<body>
+    <div id="form">
+        <label for="input">Insert Color: </label>
+        <input type="text" style="color: red;" placeholder="Some Color....." name="input_c" id="input_c"><br>
+        <button onclick="changecolor()" style="color: red;">Click</button>
+    </div>
+</body>
+
+<script>
+    function changecolor(){
+        input = document.getElementById("input_c").value;
+        console.log(input);
+        document.getElementsByTagName("body")[0].style.backgroundColor=input;
+    }
+</script>
+</html>

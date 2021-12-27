@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Semantic and Non semantic tags</title>
+    </head>
+
+    <body onload="alert('I am loading')" onresize="alert('I am getting smaller' )">
+        <header>Image Display</header>
+        <nav>
+            <a href="frame.html">Frame</a>
+            <a href="tabledemo.html">Table</a>
+            <a href="htmlforms.html">Forms</a>
+            <a href="frame.html">Frame</a>
+        </nav>
+        <section>
+            <article>
+                <figure>
+                    <img src="F:/Study/Image Processing/photosforprocessing/OIF.jfif" alt="Chainsaw">
+                    <figcaption>Chainsaw</figcaption>
+                </figure>
+            </article>
+        </section>
+
+        <form>
+            <input type="button" name="nybtn" value="click" onclick="callJsfunction()">
+        </form>
+        <form onsubmit="callJsfunction()">
+            <input type="submit" value="save">
+        </form>
+
+        <form>
+            <input type="button" name="mybtn" value="Click" ondblclick="alert('This button was double clicked')" >
+            <textarea onmousedown="alert('Hello')"></textarea>
+        </form>
+    </body>
+
+</html>
+
+<script>
+    function callJsfunction(){
+        alert('Form Submitted');
+    }
+</script>

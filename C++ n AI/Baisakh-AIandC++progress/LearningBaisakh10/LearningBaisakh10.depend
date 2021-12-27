@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1619792441 source:f:\study\learningbaisakh10\learning1mainfile.cpp
+	<iostream>
+	"Learning1headerfile.h"
+
+1619792489 f:\study\learningbaisakh10\learning1headerfile.h
+
+1619792476 source:f:\study\learningbaisakh10\learning2mainfile.cpp
+	<iostream>
+	<list>
+

@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1577938705 source:g:\programming\dsa\poush15\queue\queue.c
+	<stdio.h>
+	<stdbool.h>
+

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/983b20a9f5.js" crossorigin="anonymous"></script>
+</head>
+
+<style>
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        display: flex;
+        background-color: rgb(109, 224, 224);
+    }
+
+    .backpiece {
+        width: 40%;
+        margin: 5% auto;
+    }
+
+    #title {
+        font-size: 30px;
+        text-align: center;
+        background-color: teal;
+        padding: 2%;
+        border: 1px;
+        border-radius: 6px 6px 0 0;
+        color: white;
+    }
+
+    #forms {
+        background-color: white;
+        padding: 4%;
+        border-radius: 0 0 6px 6px;
+    }
+
+    .email,
+    .password {
+        font-size: 30px;
+        border: 1px solid gray;
+        border-radius: 10px;
+    }
+
+    .fas,
+    .fa-user,
+    .fa-lock {
+        background-color: teal;
+        font-size: 30px;
+        padding: 12px 14px 32px 15px;
+        border-radius: 10px 0 0 10px;
+    }
+
+    input[type=text],
+    input[type=password] {
+        width: 75%;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        resize: vertical;
+        outline: none;
+        border: none;
+        font-size: large;
+        /* border: 0px solid #c1c1c1;
+    width: 100%;
+    outline: none;
+    height: 30px;
+    font-size: 18px; */
+    }
+
+    a {
+        text-decoration: none;
+        color: teal;
+    }
+
+    .below {
+        font-size: x-large;
+        margin-top: 5%;
+        width: 100%;
+    }
+
+    input[type=button], button {
+        background-color: teal;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        padding: 10px 22px;
+        text-decoration: none;
+        cursor: pointer;
+        width: 75%;
+        margin: 4px auto;
+        font-size: x-large;
+    }
+
+    .below p {
+        text-align: center;
+    }
+
+    @media screen and (max-width: 1130px) {
+            .backpiece{
+            width: 80%;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+            .backpiece{
+            width: 100%;
+        }
+    }
+</style>
+
+<body>
+    <div class="backpiece">
+        <div id="title">
+            <b>Login Page</b>
+        </div>
+
+        <div id="forms">
+            <p id="nullusernameerror" style="color:red; display: none;">*This field cannot be left null</p>
+            <div class="email">
+                <span><i class="fas fa-user"></i></span>
+                <input type="text" placeholder="UserName" id="username" value="">
+            </div>
+            <br>
+            <p id="nullpassworderror" style="color:red; display: none;">*This field cannot be left null</p>
+            <div class="password">
+                <label><i class="fas fa-lock"></i></label><input type="password" placeholder="Password" id="password" value="">
+            </div>
+            <br>
+            <a href="forgotpw.html" id="forpw">Forgot Password?</a>
+            <div class="below">
+                <p><button onclick="check()">Login</button></p>
+                <br>
+                <p>Not a Member?<a href="signuppage.html">Sign Up Now</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function check(){
+            if (document.getElementById("username").value == ""){
+                let m = document.getElementById("nullusernameerror");
+                m.style.removeProperty('display');
+            }
+
+            if (document.getElementById("password").value == ""){
+                let m = document.getElementById("nullpassworderror");
+                m.style.removeProperty('display');
+            }
+        }
+    </script>
+</body>
+
+</html>

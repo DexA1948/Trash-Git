@@ -1,0 +1,73 @@
+<html>
+
+<head>
+    <title>Asar 11 JavaScript</title>
+
+</head>
+
+<body>
+    <div id="firstcontainer">
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <div id="fc_1" class="hh">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem quos, itaque saepe autem dolor consequatur
+                provident quia harum quisquam non sed ipsum sit quo soluta voluptate in amet excepturi molestias earum
+                esse.</p>
+        </div>
+    </div>
+</body>
+
+<script>
+    //objects
+    var marks = {
+        mero: 100,
+        rajanko: 50,
+        prashantko: 110
+    }
+    document.write(marks);
+    console.log(marks);
+
+    //undefined and null
+    var und = undefined;
+    var nu = null;
+    console.log(und, null);
+    document.write(und, null);
+    console.log("undefined");
+
+    //array
+    arr = ["Deshant", "Loves", "Prerana"];
+    document.write(arr[0] + " " + arr[1] + " " + arr[2]);
+
+    {
+        a = 10;//global variable
+        let a1 = 10; //only accesed here inside block
+        var a2 = 10; //can be accessed outside the block
+    }
+
+    console.log(a);
+    //console.log(a1);
+
+    function add() {
+        console.log(a + a2);
+    }
+
+    add();
+
+    //    function erroradd() {
+    //        console.log(a1 + a2);
+    //    }
+    //    erroradd();
+
+    console.clear();
+
+    //asar11_continued
+
+    //4. Operators in JavaScript
+    // +, -, *, /, %
+    console.log(5 * 8);
+    console.log(8 / 2);
+    console.log(5 / 2);
+    console.log(5 % 2);
+</script>
+<script src="asar11.js"></script>
+
+</html>

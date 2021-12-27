@@ -1,0 +1,93 @@
+/*css file*/
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(134, 128, 219);
+  }
+  .container {
+    width: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .my-form {
+    background: #fff;
+  
+    position: relative;
+    top: 4rem;
+    border-radius: 3%;
+  }
+  
+  .single-input {
+    width: 270px;
+    border: 1px solid #c1c1c1;
+    display: flex;
+    margin-bottom: 15px;
+    color: rgb(110, 110, 255);
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 450px;
+    height: 50px;
+  
+    border-radius: 10px 0px 0px 10px;
+  }
+  
+  .single-input input {
+    border: 0px solid #c1c1c1;
+    width: 100%;
+    outline: none;
+    height: 30px;
+    font-size: 18px;
+  }
+  
+  .my-form div div {
+    height: 80px;
+    background-color: rgb(110, 110, 255);
+    width: 550px;
+    border-radius: 15px 15px 0px 0px;
+    color: white;
+    padding: 0%;
+  }
+  .my-form div div h3 {
+    text-align: center;
+    padding-top: 20px;
+    font-size: xx-large;
+  }
+  
+  form {
+    padding: 30px 50px;
+  }
+  form input {
+    border-radius: 10px 0px 0px 10px;
+    text-align: left;
+    padding-top: 3%;
+  }
+  form span i {
+    border-radius: 10px 0px 0px 10px;
+    color: white;
+    padding: 8px 16px;
+  
+    background-color: rgb(110, 110, 255);
+    font-size: 32px;
+  }
+  a {
+    text-decoration: none;
+    color: rgb(110, 110, 255);
+    font-size: x-large;
+  }
+  button {
+    background-color: rgb(110, 110, 255);
+    color: white;
+    width: 450px;
+    margin-top: 50px;
+    font-size: x-large;
+    text-align: center;
+    height: 50px;
+    border-radius: 10px 10px 10px 10px;
+    border: none;
+  }
+  h4 {
+    text-align: center;
+    padding-top: 20px;
+    font-weight: normal;
+  }

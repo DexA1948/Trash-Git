@@ -1,0 +1,131 @@
+/*css file*/
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #f3f4f6;
+  }
+  .container {
+    width: 500px;
+    display: flex;
+    align-items: center;
+    float: right;
+  }
+  .my-form {
+    background: #fff;
+    height: 39rem;
+    position: absolute;
+    margin: 0 auto 0 auto;
+    top: 1rem;
+    float: right;
+    width: 29rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
+  }
+  
+  .single-input i {
+    padding: 8px 16px;
+  
+    color: #0d0e0e;
+    background-color: rgb(110, 110, 255);
+    font-size: 32px;
+    border-radius: 10px 0px 0px 10px;
+  }
+  .single-input {
+    width: 270px;
+    border: 1px solid #c1c1c1;
+    display: flex;
+    margin-bottom: 15px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 25rem;
+    height: 3rem;
+    border-radius: 10px 0px 0px 10px;
+  }
+  
+  .single-input input {
+    border: 0px solid rgb(110, 110, 255);
+    width: 100%;
+    outline: none;
+    height: 40px;
+    font-size: 18px;
+  
+    text-align: left;
+    padding-top: 15px;
+  }
+  label a {
+    color: rgb(110, 110, 255);
+    text-decoration: none;
+  }
+  
+  div h1 {
+    font-weight: bold;
+    padding-left: 30px;
+    padding-top: 30px;
+  }
+  form {
+    padding-left: 30px;
+  }
+  
+  div p {
+    padding-left: 30px;
+    font-style: normal;
+  }
+  
+  button {
+    background-color: rgb(110, 110, 255);
+    color: black;
+    width: 20rem;
+    margin-top: 50px;
+    margin: auto;
+    display: block;
+    margin-top: 30px;
+    font-size: x-large;
+    text-align: center;
+    height: 50px;
+    border-radius: 10px 10px 10px 10px;
+    border: none;
+  }
+  .button:hover {
+    background-color: rgb(75, 75, 230);
+    color: blanchedalmond;
+  }
+  h4 {
+    text-align: center;
+    padding-top: 20px;
+    font-weight: normal;
+    color: white;
+  }
+  .backgroundimg {
+    width: 77%;
+    z-index: -6;
+    float: left;
+  }
+  
+  .logo {
+    width: 20rem;
+    background-color: rgb(170, 177, 238);
+    border-radius: 50%;
+    z-index: 2;
+    position: relative;
+    top: 13.9rem;
+    right: 32.75rem;
+  }
+  .logo:hover {
+    background-color: rgb(75, 75, 230);
+  }
+  .center {
+    text-align: center;
+  }
+  .signup {
+    background-color: rgb(110, 110, 255);
+    width: 29rem;
+    border-radius: 15px 15px 0px 0px;
+    color: black;
+    height: 4rem;
+    padding: 0.5rem;
+  }
+  
+
+  .backgroundimage{
+      position: absolute;
+  }

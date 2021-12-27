@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JS Variables</title>
+</head>
+<body>
+    <p id = "sumid">Result Will Be Shown Here</p>
+    <button onclick="ShowMe()">Addition</button>
+    <script>
+        var result = 0; //global variables
+
+        function AddMe(x, y){
+            result = x + y;
+            return result;
+        }
+    </script>
+    <script>
+        function ShowMe(){
+            var add = AddMe(45, 65);
+        document.getElementById("sumid"). innerHTML = add;
+        }
+    </script>
+</body>
+</html>

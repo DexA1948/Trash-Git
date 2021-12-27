@@ -1,0 +1,43 @@
+<html>
+<style>
+    body {
+        margin: 20px;
+    }
+</style>
+
+<body>
+    <h2>JS2: Class, Object, Constructors in JS</h2>
+
+    <p id="car1"></p>
+</body>
+
+<script>
+    class Car {
+        constructor(name) {
+            this.name = name;
+            this.state = "at rest";
+            document.getElementById('car1').innerHTML += "New car created. <br>";
+        }
+
+        start() {
+            this.state = "moving";
+        }
+
+        stop() {
+            this.state = "at rest";
+        }
+
+        pstate() {
+            document.getElementById('car1').innerHTML += "Car is " + this.state + ". <br>";
+        }
+    }
+
+    let car1 = new Car("Audi");
+    car1.pstate();
+    car1.start();
+    car1.pstate();
+    car1.stop();
+    car1.pstate();
+</script>
+
+</html>

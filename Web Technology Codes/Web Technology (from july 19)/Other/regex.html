@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <title>RegExp Practice</title>
+</head>
+
+<body>
+    <p id="pattid"></p>
+</body>
+
+<script>
+    // let query = new String("HELLO guys I am the student of Vedas College previously Aberdeen LOmpaompa College my contact number is 9802213489");
+    // var patt = /(Vedas|Aberdeen)/g;
+    // let result = query.match(patt);
+    // document.getElementById("pattid").innerHTML = result;
+
+    // var digits = /\d/g;
+    // let result = query.match(digits);
+    // document.getElementById("pattid").innerHTML = result;
+
+    // var whitespace = /\s/g;
+    // let result = query.match(whitespace);
+    // document.getElementById("pattid").innerHTML = result;
+
+    // var substring = /\bLO/g;
+    // let result = query.match(substring);
+    // document.getElementById("pattid").innerHTML = result;
+    // result = query.search(substring);
+    // document.getElementById("pattid").innerHTML += result;
+
+    // var substring = /\bLO/g;
+    // let result = query.match(substring);
+    // document.getElementById("pattid").innerHTML = result;
+
+    // var positiveclosure = /l?e?/g;
+    // let result = query.match(positiveclosure);
+    // document.getElementById("pattid").innerHTML = result;
+
+    let query = new String("1000 1001 100");
+    var numbers = /(10)?/g;
+    let result = query.match(numbers);
+    document.getElementById("pattid").innerHTML = result;
+</script>
+
+</html>

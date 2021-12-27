@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <title>Prompt Demonstration</title>
+</head>
+
+<body>
+    <p id="nameid"></p>
+</body>
+
+<script>
+    let name = prompt("Please Enter Your Name", "Harendra");
+
+    if (name == "") {
+        document.getElementById("nameid").innerHTML = "You clicked OK button without providing any value.";
+    }
+    else if (name == null) {
+        document.getElementById("nameid").innerHTML = "You clicked cancel button.";
+    }
+    else {
+        document.getElementById("nameid").innerHTML = "Hi!" + name + "how are you?";
+    }
+</script>
+
+</html>

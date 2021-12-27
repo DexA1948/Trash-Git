@@ -1,0 +1,33 @@
+<html>
+<style>
+    body {
+        margin: 20px;
+    }
+</style>
+
+<body>
+    <h2>JS9: JSON Parse and Stringify</h2>
+    <div id="output">
+
+    </div>
+</body>
+
+<script>
+    // converting a js object to json object: stringify
+    const obj = { name: "john", age: function () { return 30; }, city: "New York" };
+
+    obj.age = obj.age.toString();
+
+    const myJSON = JSON.stringify(obj);
+
+    document.getElementById("output").innerHTML = myJSON;
+
+    // converting json to js object
+    const text = '["volvo", "jaguar", "bmw"]';
+
+    const jobj = JSON.parse(text);
+
+    document.getElementById("output").innerHTML += "<br>" + jobj;
+</script>
+
+</html>

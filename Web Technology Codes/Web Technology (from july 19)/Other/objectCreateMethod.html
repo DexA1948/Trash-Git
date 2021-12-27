@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object .Create method</title>
+</head>
+
+<body>
+    <div id="showid"></div>
+</body>
+
+<script>
+    //to know: JS doesn't have associative array
+    //if you use names then it is object
+    //if you only use number index its array
+    let college = {
+        name: 'Vedas',
+        address: 'Jawlakhel',
+        programs: 'CSIT BCA BBM BBS',
+        display: function(x) {
+            document.getElementById('showid').innerHTML += this.name + " " + this.address + " " + this.programs + x;
+        }
+    }
+
+    college.display(" college");
+
+    let col = Object.create(college);
+    col.name = "Aberdeen";
+    col.display(" col");
+    col.programs = "CIST BCA BBM";
+    col.display(" col");
+
+
+    //array
+    let arr = ["Deshant", "Prashant", "Rajan"];
+    let arr2 = {
+        Me: "Deshant",
+        "Small": "Prashant",
+        "Big": "Rajan"
+    };
+
+    document.getElementById('showid').innerHTML = arr2.Big;
+</script>
+
+</html>

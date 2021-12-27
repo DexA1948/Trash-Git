@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>String Methods</title>
+    </head>
+
+    <body>
+        <p id="nameid"></p>
+
+        <script>
+            let n = "Deshant Devkota";
+            let name = new String("Harendra Raj Bist");
+            let split = name.split(" ");
+            document.getElementById("nameid").innerHTML = split;
+            document.write("charAt(4) gives = " + name.charAt(4));
+            document.write("<br>charCodeAt(1) gives = " + name.charCodeAt(1));
+            document.write("<br>indexOf(Raj) gives = " + name.indexOf("Raj"));
+            document.write("<br>slice(10) gives = ", name.slice(10));
+            document.write("<br>slice(10, 15) gives = ", name.slice(10, 15));
+            document.write("<br>replace(\"Raj\", \"Man\") gives = ", name.replace("Raj", "Man"));
+            name.replace("Raj", "Man");//it doesn't work as replace doesn't work on the string rather it returns a value with replaced item
+            document.write("<br>After using name.replace" + name);
+            document.write("<br>search(\"Raj\") gives = ", name.search("Raj"));
+            document.write("<br>replace(/raj/i, \"Man\") gives = ", name.replace(/raj/i, "Man"));
+            name2 = "This is this cat and this."
+            document.write("<br>replace(/raj/i, \"Man\") gives = ", name2.replace(/this/i, "Man"));
+        </script>
+    </body>
+</html>
+
+<!-- 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 -->
+<!-- H a r e n d r a   R  a  j     B  i  s  t  a -->

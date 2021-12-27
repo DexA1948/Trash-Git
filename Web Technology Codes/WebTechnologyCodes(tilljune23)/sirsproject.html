@@ -1,0 +1,53 @@
+<html>
+  <head>
+      <title>Login Form</title>
+
+      <style>
+          body{
+              background-color: brown;
+          }
+
+          div.middleyellowblock{
+              background-color: yellow;
+              position: absolute;
+              top: 100px;
+              left: 100px;
+              bottom: 100px;
+              right: 100px;
+              z-index: -1;
+              padding: 5%;
+          }
+          h1.nulh{
+              text-align: center;
+              text-decoration: underline;
+          }
+          div.redformarea{
+              background-color: red;
+              position: inherit;
+              left: 15%;
+              top: 20%;
+              width: 70%;
+              height: 70%;
+              z-index: 0;
+              padding: 10px;
+          }
+          form.formclass{
+              padding: 20%;
+          }
+      </style>
+  </head>  
+
+  <body>
+      <div class="middleyellowblock">
+            <h1 class="nulh">New Users Login Here</h1>
+            <div class="redformarea">
+                <form class="formclass">
+                    Username: <input type="text" name="uname" placeholder="Input Username Here"><br>
+                    Password: <input type="password" name="uname" placeholder="Input Password Here"><br><br>
+                    <button>Submit</button>
+                    <button>Reset</button>
+                </form>
+            </div>
+      </div>
+  </body>
+</html>

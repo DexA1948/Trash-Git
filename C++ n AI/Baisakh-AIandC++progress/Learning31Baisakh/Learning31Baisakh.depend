@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1621074021 source:f:\study\learning31baisakh\learning31baisakh.cpp
+	<iostream>
+	<vector>
+	<iterator>
+	<typeinfo>
+	<iostream>
+	<vector>
+	<iterator>
+	<typeinfo>
+	<bits/stdc++.h>
+	<iostream>
+	<vector>
+

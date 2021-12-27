@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>CSS word wrap</title>
+    </head>
+    <style>
+        p{
+            word-wrap:break;
+            border: 5px solid purple;
+        }
+        p.test1{
+            word-break: keep-all;
+        }
+        
+        p.test2{
+            word-break: break-all;
+        }
+        
+        p.test3{
+            word-break: horizontal-tb;
+        }
+        
+        p.test4 {
+            writing-mode: horizontal-tb;
+        }
+        span.test2 {
+            writing-mode: vertical-rl;
+        }
+        p.test5 {
+            writing-mode: vertical-rl;
+        }
+    </style>
+    <body>
+        <p class="test1">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate animi adipisci rem laboriosam deserunt, omnis consequuntur expedita? Ea ipsum inventore aliquam eaque, a debitis voluptas.Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate animi adipisci rem laboriosam deserunt, omnis consequuntur expedita? Ea ipsum inventore aliquam eaque, a debitis voluptas.Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate animi adipisci rem laboriosam deserunt, omnis consequuntur expedita? Ea ipsum inventore aliquam eaque, a debitis voluptas. 
+        </p>
+        <p class="test2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate animi adipisci rem laboriosam deserunt, omnis consequuntur expedita? Ea ipsum inventore aliquam eaque, a debitis voluptas.Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate animi adipisci rem laboriosam deserunt, omnis consequuntur expedita? Ea ipsum inventore aliquam eaque, a debitis voluptas.Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate animi adipisci rem laboriosam deserunt, omnis consequuntur expedita? Ea ipsum inventore aliquam eaque, a debitis voluptas.
+        </p>
+        <p class="test3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate animi adipisci rem laboriosam deserunt, omnis consequuntur expedita? Ea ipsum inventore aliquam eaque, a debitis voluptas.Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate animi adipisci rem laboriosam deserunt, omnis consequuntur expedita? Ea ipsum inventore aliquam eaque, a debitis voluptas.Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate animi adipisci rem laboriosam deserunt, omnis consequuntur expedita? Ea ipsum inventore aliquam eaque, a debitis voluptas.
+        </p>
+        <p class="test4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate animi adipisci rem laboriosam deserunt, omnis consequuntur expedita? Ea ipsum inventore aliquam eaque, a debitis voluptas.Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate animi adipisci rem laboriosam deserunt, omnis consequuntur expedita? Ea ipsum inventore aliquam eaque, a debitis voluptas.Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate animi adipisci rem laboriosam deserunt, omnis consequuntur expedita? Ea ipsum inventore aliquam eaque, a debitis voluptas.
+        </p>
+        <p>
+            <span class="test2"></span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate animi adipisci rem laboriosam deserunt, omnis consequuntur expedita? Ea ipsum inventore aliquam eaque, a debitis voluptas.Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate animi adipisci rem laboriosam deserunt, omnis consequuntur expedita? Ea ipsum inventore aliquam eaque, a debitis voluptas.
+        </p>
+        <p class="test5">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate animi adipisci rem laboriosam deserunt, omnis consequuntur expedita? Ea ipsum inventore aliquam eaque, a debitis voluptas.Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate animi adipisci rem laboriosam deserunt, omnis consequuntur expedita? Ea ipsum inventore aliquam eaque, a debitis voluptas.Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate animi adipisci rem laboriosam deserunt, omnis consequuntur expedita? Ea ipsum inventore aliquam eaque, a debitis voluptas.
+        </p>
+        
+
+    </body>
+    
+</html>

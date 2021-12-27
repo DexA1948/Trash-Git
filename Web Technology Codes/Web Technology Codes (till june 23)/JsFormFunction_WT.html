@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Block Used In Function</title>
+    </head>
+
+    <body>
+        <h1>Name Concatenation Form</h1>
+        
+        <form style="border: 2px solid blue; border-radius: 5px; padding: 10px; width: 50%;">
+            <p>First Name: <input type="text" name="fname" id="firstname"></p>
+            <p>Middle Name: <input type="text" name="mname" id="middlename"></p>
+            <p>Last Name: <input type="text" name="lname" id="lastname"></p>
+            
+            <input type="button" onclick= "nameConcat()" value="Concatenate"/> 
+        </form>
+
+        <h3 id="concatval"></h3>
+        
+        <script>
+            function nameConcat() {
+                var fname = document.getElementById("firstname").value;
+                var mname = document.getElementById("middlename").value;
+                var lname = document.getElementById("lastname").value;
+                
+                var fullname = fname + mname + lname;
+                alert(fullname);
+
+                document.getElementById('concatval').innerHTML = final;
+            }
+        </script>
+
+    </body>
+</html>

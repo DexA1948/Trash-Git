@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title>
+        Toggle Demonstration
+    </title>
+</head>
+<script src="jquery-3.6.0.js"></script>
+
+<body>
+    <div id="div1">
+        I am div 1.
+    </div>
+    <div id="div2">
+        I am div 2.
+    </div>
+    <div id="div3">
+        I am div 3.
+    </div>
+    <button id="btnid">Click me to fade all three divs</button>
+</body>
+
+<script>
+    $("#btnid").click(function() {
+        $("#div1").hide().fadeIn();
+        $("#div2").hide().fadeIn("slow");
+    });
+</script>
+
+</html>

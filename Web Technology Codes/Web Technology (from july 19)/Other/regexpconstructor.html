@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegExp Demonstration</title>
+</head>
+
+<body>
+    <div id="id1"></div>
+
+</body>
+<script>
+    //literal notation
+
+    //test
+    str = "Happy Birthday";
+    re = new RegExp("app", "i"); //case insensitive
+    res = re.test(str);
+    document.getElementById("id1").innerHTML = res;
+
+    str = "Happy Birthday";
+    re = new RegExp("app", "i"); //case insensitive
+    res = re.test(str);
+    document.getElementById("id1").innerHTML += res;
+
+    //exec() method demonstration
+    let url = "https://vedascollege.edu.np";
+    //creating regex object
+    let reg = new RegExp(/[^.]+/); //rule is return one or more non dot ^\n characters
+    let result1 = reg.exec(url);
+    document.write(result1 + "<br>");
+    let result2 = reg.exec(url)[0].substring(8);
+    document.write(result2.toString());
+</script>
+
+</html>

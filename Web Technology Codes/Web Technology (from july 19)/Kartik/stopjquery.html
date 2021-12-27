@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script src="jquery-3.6.0.js"></script>
+
+<body>
+    <div id="div1">
+        I'm on run. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis sint soluta magni accusantium odit sapiente repellat cupiditate dolore quas modi, placeat eligendi ex non, molestias a quasi porro ab? Obcaecati, dolorem odit!
+    </div>
+
+    <br>b
+    <button id="flip">Flip</button>
+    <br>
+    <button id="stop">Stop</button>
+
+</body>
+
+<script>
+    $(document).ready(function() {
+        $("#flip").click(function() {
+            $("#panel").slideDown(5000);
+        });
+        $("#stop").click(function() {
+            $("#panel").stop();
+        });
+    });
+</script>
+
+</html>

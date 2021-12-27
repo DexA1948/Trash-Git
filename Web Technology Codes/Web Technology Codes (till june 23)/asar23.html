@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS function demo</title>
+</head>
+<body>
+    <h2>Outpiut is here</h2>
+    <p id="demoid"></p>
+    <label for="dayid">Enter Days: </label>
+    <input type="text" name="days" id="dayid">
+    <button onclick="callMe()">Convert to Years</button>
+</body>
+
+<script>
+    function toYear(days){
+        return days/365;
+    }
+
+    function callMe(){
+    let days = document.getElementById("dayid").value;
+    if(isNaN(days)){
+        alert("Chal Nikal Laude");
+    }
+    let year = toYear(days);
+    document.getElementById("demoid").innerHTML = "The days = " + year + "years";
+    confirm("Are you Satisfied?");
+    }
+</script>
+</html>

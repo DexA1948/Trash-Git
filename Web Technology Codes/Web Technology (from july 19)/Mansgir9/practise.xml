@@ -1,0 +1,22 @@
+<!DOCTYPE practise [
+    <!ELEMENT practise (child1|child2|child3)+>
+    <!ELEMENT child1 (child1-1, child1-2)>
+    <!ELEMENT child2 (#PCDATA)>
+    <!ELEMENT child3 (#PCDATA)>
+    <!ELEMENT child1-1 (#PCDATA)>
+    <!ELEMENT child1-2 EMPTY>
+    <!ATTLIST child1-2 name ID >
+]>
+
+<practise>
+    <child1>
+        <child1-1>Hello</child1-1>
+        <child1-2 />
+    </child1>
+    <child2>
+        This is PCDATA
+    </child2>
+    <child2>
+        This is PCDATA
+    </child2>
+</practise>

@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <div id="demo"></div>
+    </body>
+    <script>
+        let text = "<bookstore><book category='children'><title>Everyday Italian</title><author>Georgio Giovanni</author><price>Rs10</price></book></bookstore>";
+
+        let yeartext = "<year>2021</year>";
+
+        let parser = new DOMParser();
+
+        let x = parser.parseFromString(text, "text/xml");
+        let year = parser.parseFromString(yeartext, "text/xml");
+
+        x.getElementsByTagName("book")[0].appendChild(year.getElementsByTagName('year')[0]);
+
+        console.log(x.getElementsByTagName("book")[0].childNodes[3].childNodes[0].nodeValue);
+    </script>
+</html>

@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title>Prompt Demonstration</title>
+</head>
+
+<body>
+    <h2>My full name is: <span id="nameid" style="color: green;"></span></h2>
+</body>
+
+<script>
+    do{
+        fname = prompt("Enter First Name", "");
+        if(fname == null || fname==""){
+            alert("First Name Must Not Be Blank");
+        }
+    }while(fname == null || fname=="")
+    mname = prompt("Enter Middle Name", "");
+    do{
+        lname = prompt("Enter Last name", "");
+        if(lname == null || lname==""){
+            alert("Last Name Must Not Be Blank");
+        }
+    }while(lname == null || lname=="")
+
+    document.getElementById("nameid").innerHTML = fname + " " + mname + " " + lname;
+</script>
+
+</html>

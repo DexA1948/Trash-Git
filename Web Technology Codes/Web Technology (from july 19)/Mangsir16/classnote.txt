@@ -1,0 +1,20 @@
+XSD Complex Types:
+A complex element is an XML element that contains other elements and/or attributes.
+There are four kinds of complex elements:
+
+empty elements:
+elements that contain only other elements
+elements that contain only text
+elements that contain both other element and text
+
+How to define a complex element?
+<xs:element name="employee">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="firstname" type="xs:string"/>
+            <xs:element name="firstname" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+We can use type attribute in element to group and define ekaichoti.

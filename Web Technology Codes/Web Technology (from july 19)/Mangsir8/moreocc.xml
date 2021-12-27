@@ -1,0 +1,10 @@
+<!DOCTYPE note[
+<!ELEMENT note (message)>
+<!ELEMENT message (#PCDATA)>
+]>
+
+<note>
+    <message>Hello Subash</message>
+    <message>Hello Deshant</message>
+</note>
+

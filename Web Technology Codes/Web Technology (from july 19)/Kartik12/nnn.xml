@@ -1,0 +1,15 @@
+Create a XML document that describes the educational institutions(e.g. College, School, Universities)
+
+
+<education>  -----root element
+          <college name=’vedas’>
+                       <department>Academic</department>---childl element
+                       <department>Academic</department>
+                       <faculty>CSIT</faculty>
+           </college>
+
+            <college name=’united’>
+                       <department>Academic</department>
+                       <faculty>BCA</faculty>
+           </college>
+</education>

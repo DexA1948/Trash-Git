@@ -1,0 +1,124 @@
+<html>
+
+<head>
+    <title>Borders, Box Shadows, Text Effects, Shadow</title>
+    <link rel="shortcut icon" href="css.png" type="image/x-icon">
+</head>
+
+<style>
+    .borders {
+        border: 2px solid red;
+    }
+
+    .box_shadows {
+        height: 20px;
+        width: 200px;
+        border: 2px solid black;
+        box-shadow: 5px 5px 5px rgb(158, 84, 84);
+    }
+
+    /*text effects*/
+    p.test1 {
+        white-space: nowrap;
+        width: 200px;
+        border: 1px solid #000000;
+        overflow: hidden;
+        text-overflow: clip;
+    }
+
+    p.test1:hover{
+        overflow: visible;
+    }
+
+    p.test2 {
+        white-space: nowrap;
+        width: 200px;
+        border: 1px solid #000000;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    p.test2:hover{
+        overflow: visible;
+    }
+
+    p.test3 {
+        width: 200px;
+        border: 1px solid #000000;
+    }
+
+    p.test4 {
+        width: 200px;
+        border: 1px solid #000000;
+        word-wrap: break-word;
+    }
+
+    p.test5 {
+        width: 200px;
+        border: 1px solid #000000;
+        word-break: break-all;
+    }
+
+    p.test6 {
+        width: 200px;
+        border: 1px solid #000000;
+        word-break: keep-all;
+    }
+
+    /*text shadow property*/
+    .text_shadow{
+        text-shadow: 2px 2px red;
+    }
+
+    #vertical{
+        writing-mode: vertical-rl;
+    }
+
+    p{
+        margin: 0;
+    }
+    
+    h3{
+        margin-bottom: 0px;
+    }
+</style>
+
+<body>
+    <h3>Borders</h3>
+    <div class="borders">
+        This box has borders.
+    </div>
+    <hr>
+    <h3 class="text_shadow">Box Shadows</h3>
+    <div class="box_shadows">
+        This div casts a shadow.
+    </div>
+    <hr>
+    <div class="text_effects">
+        <h3>Text Overflow</h3>
+        <p class="test1">
+            This text overflow is going to be clipped.
+        </p>
+        <p class="test2">
+            This text overflow is going to be ellipised.
+        </p>
+        <h3>Word Wrap</h3>
+        <p class="test3">
+            This text has the longest word in dictionary which is pneumonoultramicroscopicsilicovolcanoconiosis.
+        </p>
+        <p class="test4">
+            This text has the longest word in dictionary which is pneumonoultramicroscopicsilicovolcanoconiosis.
+        </p>
+        <h3>Word Break</h3>
+        <p class="test5">
+            This text will break anywhere within word due to not using word break property.
+        </p>
+        <p class="test6">
+            This text will break at words and hyphens due to using word break property.
+        </p>
+        <h3>Vertical Text</h3>
+        <p>This text has a <span id="vertical">vertical text</span> in between.</p>
+    </div>
+    <hr>
+</body>
+
+</html>

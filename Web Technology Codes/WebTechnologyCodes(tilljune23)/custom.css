@@ -1,0 +1,23 @@
+p{
+    color: blue;
+    font-weight: 400;
+    text-align: center;
+}
+
+div{
+    background-color: violet;
+    padding: 10px;
+    margin:10px;
+}
+
+body{
+    background-image: url("Me.jpg");
+    background-position-y: left;
+    background-attachment: scroll;
+    background-repeat: repeat;
+   background-size: 50% 50%;
+}
+
+h1{
+    backface-visibility: visible;
+}
